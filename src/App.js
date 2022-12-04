@@ -20,7 +20,7 @@ function App() {
   }, []);
 
   return (
-    <div className='app bg-deep-blue'>
+    <div className='app bg-gray-900'>
       <Navbar
         isTopOfPage={isTopOfPage}
         selectedPage={selectedPage}
@@ -33,6 +33,7 @@ function App() {
             setSelectedPage={setSelectedPage}
           />
         )}
+        <Landing setSelectedPage={setSelectedPage} />
       </div>
     </div>
   );
