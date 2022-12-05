@@ -1,6 +1,7 @@
 import Navbar from './scenes/Navbar';
 import DotGroup from './scenes/DotGroup';
 import Landing from './scenes/Landing';
+import Skills from './scenes/Skills';
 import { useEffect, useState } from 'react';
 import useMediaQuery from './hooks/useMediaQuery';
 
@@ -20,13 +21,14 @@ function App() {
   }, []);
 
   return (
-    <div className='app bg-gray-900'>
+    <div className='app'>
       <Navbar
         isTopOfPage={isTopOfPage}
         selectedPage={selectedPage}
         setSelectedPage={setSelectedPage}
       />
-      <div className='mx-auto w-5/6 md:h-full'>
+      {/* <div className='mx-auto w-5/6 md:h-full'> */}
+      <div className='mx-auto h-screen w-5/6'>
         {isAboveMediumScreens && (
           <DotGroup
             selectedPage={selectedPage}
@@ -34,6 +36,10 @@ function App() {
           />
         )}
         <Landing setSelectedPage={setSelectedPage} />
+      </div>
+      {/* <div className='bg-white md:h-full'> */}
+      <div className='h-screen bg-white'>
+        <Skills />
       </div>
     </div>
   );

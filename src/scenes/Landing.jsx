@@ -13,7 +13,7 @@ const Landing = ({ setSelectedPage }) => {
       className='gap-16 py-10 md:flex md:h-full md:items-center md:justify-between'
     >
       {/* Image Section */}
-      <div className='z-10 mt-36 flex basis-3/5 justify-center md:order-2 md:mt-10'>
+      <div className='z-10 mt-28 flex basis-3/5 justify-center md:order-2 md:mt-10'>
         {isAboveMediumScreens ? (
           <Tilty
             speed={11000}
@@ -51,7 +51,7 @@ const Landing = ({ setSelectedPage }) => {
               style={{ transform: 'translateZ(40px)' }}
               src='assets/profile.jpg'
               alt='profile'
-              className='w-full max-w-[400px] rounded-lg'
+              className='w-full max-w-[300px] rounded-lg'
             />
           </Tilty>
         )}
@@ -76,7 +76,7 @@ const Landing = ({ setSelectedPage }) => {
             },
           }}
         >
-          <p className='text-center font-playfair text-6xl md:text-start'>
+          <p className='text-center font-playfair text-4xl font-bold xs:text-5xl sm:text-6xl md:text-start'>
             Argun Idem
           </p>
 
@@ -108,14 +108,14 @@ const Landing = ({ setSelectedPage }) => {
           <AnchorLink
             onClick={() => setSelectedPage('contact')}
             href='#contact'
-            className='rounded-lg bg-slate-800 py-3 px-7 font-semibold transition-all duration-300 hover:-translate-y-[2px] hover:scale-[1.01] hover:bg-white hover:text-slate-800 active:scale-95'
+            className='rounded-lg bg-slate-800 py-3 px-7 text-center text-[12px] font-semibold transition-all duration-300 hover:-translate-y-[2px] hover:scale-[1.01] hover:bg-white hover:text-slate-800 active:scale-95 xs:text-[16px]'
           >
             Contact Me
           </AnchorLink>
           <AnchorLink
             onClick={() => setSelectedPage('contact')}
             href='#contact'
-            className='ml-7 rounded-lg bg-blue-700 py-3 px-7 font-semibold tracking-wide transition-all duration-300 hover:-translate-y-[2px] hover:scale-[1.01] hover:bg-yellow-500 hover:text-slate-800  active:scale-95'
+            className='ml-7 rounded-lg bg-blue-700 py-3 px-7 text-center text-[12px] font-semibold tracking-wide transition-all duration-300 hover:-translate-y-[2px] hover:scale-[1.01] hover:bg-yellow-500 hover:text-slate-800  active:scale-95 xs:text-[16px]'
           >
             <div className=''>Let's talk.</div>
           </AnchorLink>

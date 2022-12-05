@@ -9,6 +9,18 @@ body,
 #root,
 .app {
   height: 100%;
-  background-color: rgb(17 24 39);
   @apply text-white;
 }
+
+.app {
+  background-color: rgb(17 24 39);
+}
+/* 
+html,
+body,
+#root,
+.app {
+  height: 100%;
+  background-color: rgb(17 24 39);
+  @apply text-white;
+} */
