@@ -10,10 +10,10 @@ const Landing = ({ setSelectedPage }) => {
   return (
     <section
       id='home'
-      className='gap-16 py-10 md:flex md:h-full md:items-center md:justify-between'
+      className='h-full gap-24 py-16 sm:py-20 md:flex md:items-center md:justify-between md:gap-8 md:py-48'
     >
       {/* Image Section */}
-      <div className='z-10 mt-28 flex basis-3/5 justify-center md:order-2 md:mt-10'>
+      <div className='z-10 mt-28 flex basis-2/5 justify-center md:order-2 md:mt-10 md:justify-end'>
         {isAboveMediumScreens ? (
           <Tilty
             speed={11000}
@@ -58,7 +58,7 @@ const Landing = ({ setSelectedPage }) => {
       </div>
 
       {/* Main Section */}
-      <div className='mt-12 basis-2/5 md:mt-32'>
+      <div className='mt-12 basis-3/5 md:mt-32'>
         {/* Headings Section */}
         <motion.div
           initial='hidden'
@@ -80,7 +80,7 @@ const Landing = ({ setSelectedPage }) => {
             Argun Idem
           </p>
 
-          <p className='mx-auto mt-8 mb-7 max-w-[500px] text-center text-sm md:mx-0 md:max-w-[700px] md:text-start'>
+          <p className='mx-auto mt-8 mb-7 max-w-[500px] text-center text-sm md:mx-0 md:max-w-[600px] md:text-start'>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima
             delectus quibusdam quasi consequuntur veniam, iusto nisi rem
             voluptatum labore ad?

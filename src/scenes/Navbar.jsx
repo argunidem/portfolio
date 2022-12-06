@@ -44,7 +44,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
         },
       }}
     >
-      <div className='mx-auto flex w-5/6 items-center justify-between'>
+      <div className='mx-auto flex w-5/6 items-center justify-between md:w-4/5'>
         <img src={Logo} alt='logo' className='w-14' />
         {/* Desktop Nav */}
         {isAboveSmallScreens ? (

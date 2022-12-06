@@ -1,8 +1,6 @@
-import useMediaQuery from '../hooks/useMediaQuery';
 import { motion } from 'framer-motion';
 
 const Skills = () => {
-  const isAboveMediumScreens = useMediaQuery('(min-width: 1060px)');
   return (
     <motion.section
       initial='hidden'
@@ -19,7 +17,7 @@ const Skills = () => {
           x: 0,
         },
       }}
-      className='mx-auto flex h-full w-5/6 flex-col items-center gap-16 pt-40 ss:gap-28 ss:pt-52'
+      className='mx-auto flex w-5/6 flex-col items-center gap-16 pt-40 ss:gap-28 ss:pt-52'
       id='skills'
     >
       {/* H2 */}
