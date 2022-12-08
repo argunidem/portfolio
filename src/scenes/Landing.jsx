@@ -10,7 +10,7 @@ const Landing = ({ setSelectedPage }) => {
   return (
     <section
       id='home'
-      className='h-full gap-24 py-16 sm:py-20 md:flex md:items-center md:justify-between md:gap-8 md:py-48'
+      className='sm:py-15 h-full gap-24 py-12 md:flex md:items-center md:justify-between md:gap-8 md:py-48'
     >
       {/* Image Section */}
       <div className='z-10 mt-28 flex basis-2/5 justify-center md:order-2 md:mt-10 md:justify-end'>
@@ -28,11 +28,11 @@ const Landing = ({ setSelectedPage }) => {
               variants={{
                 hidden: {
                   opacity: 0,
-                  x: 100,
+                  y: 100,
                 },
                 visible: {
                   opacity: 1,
-                  x: 0,
+                  y: 0,
                 },
               }}
               style={{ transform: 'translateZ(40px)' }}
@@ -81,9 +81,8 @@ const Landing = ({ setSelectedPage }) => {
           </p>
 
           <p className='mx-auto mt-8 mb-7 max-w-[500px] text-center text-sm md:mx-0 md:max-w-[600px] md:text-start'>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima
-            delectus quibusdam quasi consequuntur veniam, iusto nisi rem
-            voluptatum labore ad?
+            I am a front-end developer who has adopted self-development in every
+            area that i am curious about and tries to use new technologies.
           </p>
         </motion.div>
 

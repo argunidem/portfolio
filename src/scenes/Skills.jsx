@@ -1,34 +1,69 @@
 import { motion } from 'framer-motion';
 
+const container = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const item = {
+  hidden: { opacity: 0, scale: 0 },
+  visible: { opacity: 1, scale: 1 },
+};
+
+// return (
+//   <motion.ol
+//     variants={container}
+//     initial="hidden"
+//     animate="show"
+//   >
+//     <motion.li variants={item} />
+//     <motion.li variants={item} />
+//   </motion.ol>
+// )
+
 const Skills = () => {
   return (
     <motion.section
+      variants={container}
       initial='hidden'
       whileInView='visible'
       viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 0.6 }}
-      variants={{
-        hidden: {
-          opacity: 0,
-          x: -100,
-        },
-        visible: {
-          opacity: 1,
-          x: 0,
-        },
-      }}
-      className='mx-auto flex w-5/6 flex-col items-center gap-16 pt-40 ss:gap-28 ss:pt-52'
+      // initial='hidden'
+      // whileInView='visible'
+      // viewport={{ once: true, amount: 0.2 }}
+      // transition={{ duration: 0.6 }}
+      // variants={{
+      //   hidden: {
+      //     opacity: 0,
+      //     x: -100,
+      //   },
+      //   visible: {
+      //     opacity: 1,
+      //     x: 0,
+      //   },
+      // }}
+      className='mx-auto flex w-5/6 flex-col items-center gap-16 pt-56 pb-48 ss:gap-28'
       id='skills'
     >
       {/* H2 */}
-      <h2 className='font-playfair text-4xl font-semibold text-blue-500 opacity-80'>
+      <motion.h2
+        variants={item}
+        className='font-playfair text-4xl font-semibold text-blue-500 opacity-80'
+      >
         My Skills
-      </h2>
+      </motion.h2>
       {/* Header and Image Section */}
       {/* <div className='flex md:max-w-[500px] md:flex-wrap md:justify-center md:gap-20 md:space-y-2'> */}
       <div className='flex max-w-[500px] flex-wrap justify-center gap-20 space-y-2'>
         {/* Html */}
-        <div className='mt-2 flex w-32 flex-col items-center space-y-2 ss:w-28'>
+        <motion.div
+          variants={item}
+          className='mt-2 flex w-32 flex-col items-center space-y-2 ss:w-28'
+        >
           <svg
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 48 48'
@@ -47,10 +82,13 @@ const Skills = () => {
             />
           </svg>
           <p className='text-slate-500'>HTML5</p>
-        </div>
+        </motion.div>
 
         {/* Css */}
-        <div className='flex w-32 flex-col items-center space-y-2 ss:w-28'>
+        <motion.div
+          variants={item}
+          className='flex w-32 flex-col items-center space-y-2 ss:w-28'
+        >
           <svg
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 48 48'
@@ -69,9 +107,12 @@ const Skills = () => {
             />
           </svg>
           <p className='text-slate-500'>CSS</p>
-        </div>
+        </motion.div>
         {/* Tailwind */}
-        <div className='flex w-32 flex-col items-center space-y-2 ss:w-28'>
+        <motion.div
+          variants={item}
+          className='flex w-32 flex-col items-center space-y-2 ss:w-28'
+        >
           <svg
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 48 48'
@@ -84,9 +125,12 @@ const Skills = () => {
             />
           </svg>
           <p className='text-slate-500'>Tailwind CSS</p>
-        </div>
+        </motion.div>
         {/* Sass */}
-        <div className='flex w-32 flex-col items-center space-y-2 ss:w-28'>
+        <motion.div
+          variants={item}
+          className='flex w-32 flex-col items-center space-y-2 ss:w-28'
+        >
           <svg
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 48 48'
@@ -99,9 +143,12 @@ const Skills = () => {
             />
           </svg>
           <p className='text-slate-500'>Sass</p>
-        </div>
+        </motion.div>
         {/* Javascript */}
-        <div className='flex w-32 flex-col items-center space-y-2 ss:w-28'>
+        <motion.div
+          variants={item}
+          className='flex w-32 flex-col items-center space-y-2 ss:w-28'
+        >
           <svg
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 48 48'
@@ -115,9 +162,12 @@ const Skills = () => {
             />
           </svg>
           <p className='text-slate-500'>Javascript</p>
-        </div>
+        </motion.div>
         {/* Typescript */}
-        <div className='flex w-32 flex-col items-center space-y-2 ss:w-28'>
+        <motion.div
+          variants={item}
+          className='flex w-32 flex-col items-center space-y-2 ss:w-28'
+        >
           <svg
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 48 48'
@@ -135,9 +185,12 @@ const Skills = () => {
             />
           </svg>
           <p className='text-slate-500'>Typescript</p>
-        </div>
+        </motion.div>
         {/* React */}
-        <div className='flex w-32 flex-col items-center space-y-2 ss:w-28'>
+        <motion.div
+          variants={item}
+          className='flex w-32 flex-col items-center space-y-2 ss:w-28'
+        >
           <svg
             width='74px'
             height='74px'
@@ -153,9 +206,12 @@ const Skills = () => {
             </g>
           </svg>
           <p className='text-slate-500'>React.js</p>
-        </div>
+        </motion.div>
         {/* Git */}
-        <div className='flex w-32 flex-col items-center space-y-2 ss:w-28'>
+        <motion.div
+          variants={item}
+          className='flex w-32 flex-col items-center space-y-2 ss:w-28'
+        >
           <svg
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 48 48'
@@ -168,7 +224,7 @@ const Skills = () => {
             />
           </svg>
           <p className='text-slate-500'>Git</p>
-        </div>
+        </motion.div>
       </div>
     </motion.section>
   );

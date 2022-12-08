@@ -4,12 +4,11 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
+/* html, */
 body,
 #root,
 .app {
   height: 100%;
-  max-width: 100vw !important;
   @apply text-white;
 }
 

@@ -10,7 +10,7 @@ const container = {
 };
 
 const projectVariant = {
-  hidden: { opacity: 0, scale: 0.8 },
+  hidden: { opacity: 0, scale: 0 },
   visible: { opacity: 1, scale: 1 },
 };
 
@@ -36,7 +36,7 @@ const Project = ({ title }) => {
 
 const Projects = () => {
   return (
-    <section id='projects' className='pt-56 pb-48'>
+    <section id='projects' className='mx-auto w-5/6 pt-56 pb-48'>
       {/* HEADINGS */}
       <motion.div
         className='mx-auto text-center md:w-2/5'
@@ -59,7 +59,7 @@ const Projects = () => {
       {/* PROJECTS */}
       <div className='flex justify-center pt-24'>
         <motion.div
-          className='sm:grid sm:grid-cols-2'
+          className='sm:grid sm:grid-cols-2 sm:space-x-2'
           variants={container}
           initial='hidden'
           whileInView='visible'
